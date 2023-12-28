@@ -9,7 +9,7 @@ export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
   const { data } = await axios.get(`/api/v1/product/${id}`);
   console.log(data)
   dispatch({
-    type: ADD_TO_CART,
+    type: ADD_TO_CART, 
     payload: {
       productId: data.Product._id,
       link: data.Product.seo[0].metalink,
